@@ -1,0 +1,10 @@
+1. Apa fungsi dari BCryptPasswordEncoder?
+BCryptPassword encoder akan men-enkripsi password dari user yang berbentuk plaintext (misalnya = ganteng123) menjadi sebuah hash yang secure oleh sebuah algoritma bernama BCrypt ($2y$10$YQoeLPcqvF9ECDp4Y7vvHeK2n9Qtoce9gkyhD/xIEPnt.Eq9rK0L6).
+Hash ini yang nantinya akan disimpan di dalam database.
+
+2. Apa yang dilakukan oleh baris:
+Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
+grantedAuthorities.add(new SimpleGrantedAuthority(user.getRole()));
+
+Baris di atas akan membuat sebuah HashSet yang berisikan Role milik si user yang nantinya akan menentukan apa saja yang bisa dibuka atau diambil oleh user.
+Penyetujuan role user bisa membuka apa terdapat di WebSecurityConfig.
